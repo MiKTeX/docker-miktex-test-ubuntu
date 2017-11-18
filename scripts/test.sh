@@ -10,6 +10,9 @@ else
     apt-get -y install apt-transport-https
     apt-get -y install miktex
 fi
+if [ -d /miktex/repository ]; then
+    mpm --set-repository=/miktex/repository
+fi
 mpm --admin --package-level=basic --upgrade
 cd /miktex/test
 cmake /miktex/test-suite
