@@ -13,6 +13,7 @@ fi
 if [ -d /miktex/repository ]; then
     mpm --set-repository=/miktex/repository
 fi
+initexmf --admin --set-config-value=[MPM]AutoInstall=1
 mpm --admin --package-level=basic --upgrade
 cd /miktex/test
 cmake /miktex/test-suite
