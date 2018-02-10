@@ -1,6 +1,6 @@
 FROM ubuntu:xenial
 
-LABEL Description="MiKTeX test environment, Ubuntu 16.04" Vendor="Christian Schenk" Version="2.9.6601"
+LABEL Description="MiKTeX test environment, Ubuntu 16.04" Vendor="Christian Schenk" Version="2.9.6615"
 
 RUN apt-get update
 RUN apt-get -y install ghostscript
