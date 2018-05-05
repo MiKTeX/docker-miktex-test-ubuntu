@@ -4,11 +4,11 @@
 
 Get the latest image from the registry:
 
-    docker pull miktex/miktex-test-xenial
+    docker pull miktex/miktex-test-ubuntu:xenial
 
 or build it yourself:
 
-    docker build --tag miktex/miktex-test-xenial .
+    docker build --tag miktex/miktex-test-ubuntu:xenial .
 
 ## Using the image
 
@@ -38,4 +38,4 @@ Run the tests:
       -v ~/work/miktex/tests/xenial:/miktex/test:rw \
       -e USER_ID=`id -u` \
       -e GROUP_ID=`id -g` \
-      miktex/miktex-test-xenial
+      miktex/miktex-test-ubuntu:xenial
