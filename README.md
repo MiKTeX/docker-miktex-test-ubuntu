@@ -4,11 +4,11 @@
 
 Get the latest image from the registry:
 
-    docker pull miktex/miktex-test-ubuntu
+    docker pull miktex/miktex-test-ubuntu:bionic
 
 or build it yourself:
 
-    docker build --tag miktex/miktex-test-ubuntu .
+    docker build --tag miktex/miktex-test-ubuntu:bionic .
 
 ## Using the image
 
@@ -38,4 +38,4 @@ Run the tests:
       -v ~/work/miktex/tests/bionic:/miktex/test:rw \
       -e USER_ID=`id -u` \
       -e GROUP_ID=`id -g` \
-      miktex/miktex-test-ubuntu
+      miktex/miktex-test-ubuntu:bionic
