@@ -1,6 +1,6 @@
-FROM ubuntu:bionic
+FROM ubuntu:latest
 
-LABEL Description="MiKTeX test environment, Ubuntu 18.04" Vendor="Christian Schenk" Version="2.9.6699"
+LABEL Description="MiKTeX test environment, Ubuntu latest" Vendor="Christian Schenk" Version="2.9.5701"
 
 RUN    apt-get update \
     && apt-get install -y --no-install-recommends \
