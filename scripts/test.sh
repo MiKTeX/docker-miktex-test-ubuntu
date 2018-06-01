@@ -3,6 +3,8 @@ set -e
 miktexsetup finish
 if [ -d /miktex/repository ]; then
     mpm --set-repository=/miktex/repository
+else
+    mpm --list-repositories
 fi
 initexmf --set-config-value=[MPM]AutoInstall=1
 mpm --package-level=basic --upgrade
