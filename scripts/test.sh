@@ -4,9 +4,9 @@ set -e
 
 _on_exit() {
     if [ -d ~/.miktex/texmfs/data/miktex/log ]; then
-	rm -fr logfiles
-	mkdir logfiles
-	cp ~/.miktex/texmfs/data/miktex/log/* logfiles
+	rm -fr /miktex/test/logfiles
+	mkdir /miktex/test/logfiles
+	cp ~/.miktex/texmfs/data/miktex/log/* /miktex/test/logfiles
     fi
     exit $3
 }
