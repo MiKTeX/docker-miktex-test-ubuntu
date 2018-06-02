@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-LABEL Description="MiKTeX test environment, Ubuntu latest" Vendor="Christian Schenk" Version="2.9.5701"
+LABEL Description="MiKTeX test environment, Ubuntu latest" Vendor="Christian Schenk" Version="2.9.6727"
 
 RUN    apt-get update \
     && apt-get install -y --no-install-recommends \
