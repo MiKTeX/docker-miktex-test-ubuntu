@@ -2,7 +2,7 @@
 
 set -e
 
-function _on_exit {
+_on_exit() {
     if [ -d ~/.miktex/texmfs/data/miktex/log ]; then
 	rm -fr logfiles
 	mkdir logfiles
