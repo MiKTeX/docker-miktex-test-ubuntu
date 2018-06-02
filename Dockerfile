@@ -1,6 +1,6 @@
 FROM ubuntu:xenial
 
-LABEL Description="MiKTeX test environment, Ubuntu 16.04" Vendor="Christian Schenk" Version="2.9.6619"
+LABEL Description="MiKTeX test environment, Ubuntu 16.04" Vendor="Christian Schenk" Version="2.9.6727"
 
 RUN    apt-get update \
     && apt-get install -y --no-install-recommends \
