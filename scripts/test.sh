@@ -8,10 +8,11 @@ _on_exit() {
 	mkdir /miktex/test/logfiles
 	cp ~/.miktex/texmfs/data/miktex/log/* /miktex/test/logfiles
     fi
-    exit $3
+    echo test.sh exits with $1
+    exit $1
 }
 
-trap '_on_exit $0 $LINENO $?' EXIT
+trap '_on_exit $?' EXIT
 
 miktexsetup finish
 if [ -d /miktex/repository ]; then
