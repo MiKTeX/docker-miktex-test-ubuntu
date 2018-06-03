@@ -19,9 +19,9 @@ trap '_on_exit $?' EXIT
 miktexsetup finish
 if [ -d /miktex/repository ]; then
     mpm --set-repository=/miktex/repository
-else
-    # TODO: --check-repositories
-    mpm --list-repositories
+elif [ "$MIKTEX_CHECK_REPOSITORIES" = true ]; then
+    echo going to check repositorie - this can take a few minutes
+    mpm --check-repositories
 fi
 initexmf --set-config-value=[MPM]AutoInstall=1
 mpm --package-level=basic --upgrade
