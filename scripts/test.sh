@@ -4,6 +4,8 @@ set -e
 
 _on_exit() {
     if [ -d ~/.miktex/texmfs/data/miktex/log ]; then
+	echo going to save log files:
+	ls -l ~/.miktex/texmfs/data/miktex/lo
 	rm -fr /miktex/test/logfiles
 	mkdir /miktex/test/logfiles
 	cp ~/.miktex/texmfs/data/miktex/log/* /miktex/test/logfiles
