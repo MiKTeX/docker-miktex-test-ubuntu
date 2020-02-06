@@ -1,6 +1,6 @@
 FROM ubuntu:bionic
 
-LABEL Description="MiKTeX test environment, Ubuntu 18.04" Vendor="Christian Schenk" Version="2.9.6727"
+LABEL Description="MiKTeX test environment, Ubuntu 18.04" Vendor="Christian Schenk" Version="2.9.7341"
 
 RUN    apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -9,6 +9,7 @@ RUN    apt-get update \
            cmake \
            curl \
            ghostscript \
+           gnupg \
            gosu \
            make \
            unzip \
