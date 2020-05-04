@@ -1,14 +1,14 @@
-# Ubuntu 18.04 docker image with MiKTeX test environment
+# Ubuntu 20.04 docker image with MiKTeX test environment
 
 ## Obtaining the image
 
 Get the latest image from the registry:
 
-    docker pull miktex/miktex-test-ubuntu:bionic
+    docker pull miktex/miktex-test-ubuntu:focal
 
 or build it yourself:
 
-    docker build --tag miktex/miktex-test-ubuntu:bionic .
+    docker build --tag miktex/miktex-test-ubuntu:focal .
 
 ## Using the image
 
@@ -35,7 +35,7 @@ Run the tests:
     git clone https://github.com/MiKTeX/miktex-testing ~/work/miktex/test-suite
     docker run --rm -t \
       -v ~/work/miktex/test-suite:/miktex/test-suite:ro \
-      -v ~/work/miktex/tests/bionic:/miktex/test:rw \
+      -v ~/work/miktex/tests/focal:/miktex/test:rw \
       -e USER_ID=`id -u` \
       -e GROUP_ID=`id -g` \
-      miktex/miktex-test-ubuntu:bionic
+      miktex/miktex-test-ubuntu:focal
