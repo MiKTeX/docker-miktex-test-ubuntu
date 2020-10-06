@@ -14,14 +14,12 @@ RUN    apt-get update \
            unzip \
            zip
 
-RUN    curl --fail --location --show-error --silent https://cmake.org/files/v3.8/cmake-3.8.2-Linux-x86_64.tar.gz \
-     | tar -xz --strip=1 -C /usr/local
+RUN    curl --fail --location --show-error --silent --output cmake.tar.gz https://cmake.org/files/v3.8/cmake-3.8.2-Linux-x86_64.tar.gz \
+     && echo "33e4851d3219b720f4b64fcf617151168f1bffdf5afad25eb4b7f5f58cee3a08 *cmake.tar.gz" | sha256sum --status --check \
+     && tar -xzf cmake.tar.gz --strip=1 -C /usr/local
 
-RUN    gpg --keyserver ha.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4 \
-    && curl -o /usr/local/bin/gosu -SL "https://github.com/tianon/gosu/releases/download/1.4/gosu-$(dpkg --print-architecture)" \
-    && curl -o /usr/local/bin/gosu.asc -SL "https://github.com/tianon/gosu/releases/download/1.4/gosu-$(dpkg --print-architecture).asc" \
-    && gpg --verify /usr/local/bin/gosu.asc \
-    && rm /usr/local/bin/gosu.asc \
+RUN    curl -o /usr/local/bin/gosu -SL "https://github.com/tianon/gosu/releases/download/1.4/gosu-amd64" \
+    && echo "6f3a72f474cafacb3c7b4a7397a1f37d82fcc27b596cbb66e4ea0a8ee92eee76 */usr/local/bin/gosu" | sha256sum --status --check \
     && chmod +x /usr/local/bin/gosu
 
 RUN mkdir /miktex
