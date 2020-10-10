@@ -8,7 +8,7 @@ _on_exit() {
 	ls -l ~/.miktex/texmfs/data/miktex/log
 	rm -fr /miktex/test/logfiles
 	mkdir /miktex/test/logfiles
-	cp ~/.miktex/texmfs/data/miktex/log/* /miktex/test/logfiles
+	cp -r ~/.miktex/texmfs/data/miktex/log/* /miktex/test/logfiles
     fi
     echo test.sh exits with $1
     exit $1
