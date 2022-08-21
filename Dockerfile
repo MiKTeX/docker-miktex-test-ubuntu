@@ -1,19 +1,20 @@
-FROM ubuntu:focal
+FROM ubuntu:jammy
 
-LABEL Description="MiKTeX test environment, Ubuntu 20.04" Vendor="Christian Schenk" Version="2.9.7429"
+LABEL Description="MiKTeX test environment, Ubuntu 22.04" Vendor="Christian Schenk" Version="22.8.20"
 
-RUN    apt-get update \
-    && apt-get install -y --no-install-recommends \
-           apt-transport-https \
-           ca-certificates \
-           cmake \
-           curl \
-           ghostscript \
-           gnupg \
-           gosu \
-           make \
-           unzip \
-           zip
+RUN \
+    apt-get update; \
+    apt-get install -y --no-install-recommends \
+        apt-transport-https \
+        ca-certificates \
+        cmake \
+        curl \
+        ghostscript \
+        gnupg \
+        gosu \
+        make \
+        unzip \
+        zip
 
 RUN mkdir /miktex
 WORKDIR /miktex
