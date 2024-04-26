@@ -1,6 +1,8 @@
-FROM ubuntu:jammy
+FROM ubuntu:noble
 
-LABEL Description="MiKTeX test environment, Ubuntu 22.04" Vendor="Christian Schenk" Version="22.11.18"
+LABEL Description="MiKTeX test environment, Ubuntu 24.04" Vendor="Christian Schenk" Version="24.4.26"
+
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN \
     apt-get update; \

@@ -1,14 +1,14 @@
-# Ubuntu 22.04 docker image with MiKTeX test environment
+# Ubuntu 24.04 docker image with MiKTeX test environment
 
 ## Obtaining the image
 
 Get the latest image from the registry:
 
-    docker pull miktex/miktex-test-ubuntu:jammy
+    docker pull miktex/miktex-test-ubuntu:noble
 
 or build it yourself:
 
-    docker build --tag miktex/miktex-test-ubuntu:jammy .
+    docker build --tag miktex/miktex-test-ubuntu:noble .
 
 ## Using the image
 
@@ -35,7 +35,7 @@ Run the tests:
     git clone https://github.com/MiKTeX/miktex-testing ~/work/miktex/test-suite
     docker run --rm -t \
       -v ~/work/miktex/test-suite:/miktex/test-suite:ro \
-      -v ~/work/miktex/tests/jammy:/miktex/test:rw \
+      -v ~/work/miktex/tests/noble:/miktex/test:rw \
       -e USER_ID=`id -u` \
       -e GROUP_ID=`id -g` \
-      miktex/miktex-test-ubuntu:jammy
+      miktex/miktex-test-ubuntu:noble
