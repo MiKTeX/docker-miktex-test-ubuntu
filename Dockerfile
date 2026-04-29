@@ -1,6 +1,6 @@
-FROM ubuntu:noble
+FROM ubuntu:resolute
 
-LABEL Description="MiKTeX test environment, Ubuntu 24.04" Vendor="Christian Schenk" Version="24.4.26"
+LABEL Description="MiKTeX test environment, Ubuntu 26.04" Vendor="Christian Schenk" Version="26.4.29"
 
 ENV DEBIAN_FRONTEND=noninteractive
 
