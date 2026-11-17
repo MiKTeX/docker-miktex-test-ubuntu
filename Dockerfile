@@ -1,6 +1,6 @@
 FROM ubuntu:jammy
 
-LABEL Description="MiKTeX test environment, Ubuntu 22.04" Vendor="Christian Schenk" Version="22.11.18"
+LABEL Description="MiKTeX test environment, Ubuntu 22.04" Vendor="Christian Schenk" Version="26.11.17"
 
 RUN \
     apt-get update; \
